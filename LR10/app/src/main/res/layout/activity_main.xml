@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_gravity="center">
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/rating"
+        android:onClick="onClick"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_up"
+        android:layout_below="@id/rating"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="30dp"
+        android:text="Up"
+        android:onClick="onClick"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating"
+        android:layout_toEndOf="@id/button_up"
+        android:id="@+id/button_down"
+        android:layout_marginEnd="30dp"
+        android:text="Down"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/rating"
+        android:layout_marginStart="-150dp"
+        android:layout_marginTop="63dp"
+        android:layout_toEndOf="@id/button_down"
+        android:paddingLeft="17dp"
+        android:paddingTop="4dp"
+        android:text="Delay = 1000/1.0"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_down"
+        android:layout_marginTop="71dp"
+        android:text="Progress:" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_text"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="10dp" />
+
+    <ToggleButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:textOff="Start"
+        android:textOn="Already started"
+        android:id="@+id/start"
+        android:onClick="onClick"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset"
+        android:text="Reset"
+        android:layout_below="@id/start"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"/>
+</RelativeLayout>
